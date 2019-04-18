@@ -12,9 +12,11 @@
 #import "CommonDefine.h"
 #import "MACALKHandle.h"
 #import "AFHttpTool.h"
+#import "MACALKTool.h"
 
 #import "UIColor+StrColor.h"
 #import "UIImage+Add.h"
+#import "CommonLabel.h"
 #import "SVProgressHUD.h"
 #import "IQKeyboardManager.h"
 #import <SDWebImage.h>

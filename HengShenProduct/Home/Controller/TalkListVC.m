@@ -21,10 +21,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:MACALKHexColor(@"#ECEDEE")] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    self.navigationItem.title = @"会话";
+    self.navigationItem.title = @"撩信";
     [self configView];
-    
     
 }
 
@@ -36,17 +37,18 @@
 }
 
 - (void)configRightItem {
-    UIButton*rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0,0,30,30)];
-    [rightButton setImage:MACALKImage(@"my_icon_set") forState:UIControlStateNormal];
+    UIButton*rightButton = [[UIButton alloc]init];
+    [rightButton setImage:MACALKImage(@"home_icon_more") forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(moreItemPress) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-    self.navigationItem.rightBarButtonItem= rightItem;
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)moreItemPress {
     TalkListRightItemView *rightItem = [[TalkListRightItemView alloc]init];
+    [self.view addSubview:rightItem];
     [rightItem openView];
-    [rightItem.addFriendBtn addTarget:self action:@selector(addFriendClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [rightItem.addFriendBtn addTarget:self action:@selector(addFriendClick:) forControlEvents:UIControlEventTouchUpInside];
 
     UITapGestureRecognizer *rightItemBgtap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(rightItemBgtap:)];
     [rightItem.rightItemBgView addGestureRecognizer:rightItemBgtap];

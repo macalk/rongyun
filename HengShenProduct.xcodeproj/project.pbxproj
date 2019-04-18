@@ -23,12 +23,10 @@
 		2B528538225DEF9300E8C218 /* MACALKBaseTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528534225DEF9300E8C218 /* MACALKBaseTabBarVC.m */; };
 		2B528539225DEF9300E8C218 /* MACALKBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528535225DEF9300E8C218 /* MACALKBaseVC.m */; };
 		2B52853A225DEF9300E8C218 /* MACALKBaseNAVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528537225DEF9300E8C218 /* MACALKBaseNAVC.m */; };
-		2B528545225DF1CF00E8C218 /* AddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528544225DF1CF00E8C218 /* AddressVC.m */; };
 		2B528548225DF1DE00E8C218 /* PanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528547225DF1DE00E8C218 /* PanVC.m */; };
 		2B52854B225DF1EB00E8C218 /* FoundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B52854A225DF1EB00E8C218 /* FoundVC.m */; };
 		2B52854E225DF1F600E8C218 /* MineVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B52854D225DF1F600E8C218 /* MineVC.m */; };
 		2B52855E225ECD7C00E8C218 /* TalkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528557225ECD7C00E8C218 /* TalkVC.m */; };
-		2B52855F225ECD7C00E8C218 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528558225ECD7C00E8C218 /* HomeVC.m */; };
 		2B528560225ECD7C00E8C218 /* TalkListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528559225ECD7C00E8C218 /* TalkListVC.m */; };
 		2B528563225ECE0700E8C218 /* TalkListRightItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528562225ECE0700E8C218 /* TalkListRightItemView.m */; };
 		2B528566225EFFC700E8C218 /* AddFriendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528565225EFFC700E8C218 /* AddFriendVC.m */; };
@@ -36,8 +34,24 @@
 		2B528581225F3F5400E8C218 /* AFHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528580225F3F5400E8C218 /* AFHttpTool.m */; };
 		2B528588226067EC00E8C218 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B528587226067EC00E8C218 /* LoginVC.m */; };
 		2B52858B2260952B00E8C218 /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B52858A2260952B00E8C218 /* UserInfoVC.m */; };
-		2BD2B8FC2261728E00858558 /* UpLoadUserHeadImgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B8FB2261728E00858558 /* UpLoadUserHeadImgVC.m */; };
 		2BD2B8FF22617E0B00858558 /* UIImage+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B8FE22617E0B00858558 /* UIImage+Add.m */; };
+		2BD2B902226563B800858558 /* LZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B901226563B800858558 /* LZTabBar.m */; };
+		2BD2B9592265AEDE00858558 /* CommonLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9582265AEDE00858558 /* CommonLabel.m */; };
+		2BD2B9812265CC6600858558 /* YYImageClipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9802265CC6600858558 /* YYImageClipViewController.m */; };
+		2BD2B9842265D00A00858558 /* UpLoadHeadImgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9832265D00A00858558 /* UpLoadHeadImgVC.m */; };
+		2BD2B9872266B58400858558 /* AddGroupChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9862266B58400858558 /* AddGroupChatVC.m */; };
+		2BD2B98A2266B5BE00858558 /* ScanVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9892266B5BE00858558 /* ScanVC.m */; };
+		2BD2B98D2266B5D100858558 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B98C2266B5D100858558 /* HelpVC.m */; };
+		2BD2B9902266D29E00858558 /* GroupSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B98F2266D29E00858558 /* GroupSearchView.m */; };
+		2BD2B9BB226716C200858558 /* DSectionIndexItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9B9226716C200858558 /* DSectionIndexItemView.m */; };
+		2BD2B9BC226716C200858558 /* DSectionIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9BA226716C200858558 /* DSectionIndexView.m */; };
+		2BD2B9C122671DB200858558 /* AddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9BF22671DB200858558 /* AddressVC.m */; };
+		2BD2B9C422671DD000858558 /* AddressHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9C322671DD000858558 /* AddressHeadView.m */; };
+		2BD2B9C722671E9000858558 /* SearchResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9C622671E9000858558 /* SearchResultVC.m */; };
+		2BD2B9CA226732F900858558 /* RCDUserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9C9226732F900858558 /* RCDUserInfoManager.m */; };
+		2BD2B9CF2267346100858558 /* RCDGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9CB2267346100858558 /* RCDGroupInfo.m */; };
+		2BD2B9D02267346100858558 /* RCDUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9CD2267346100858558 /* RCDUserInfo.m */; };
+		2BD2B9FE22686F4200858558 /* AddFriendSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2B9FD22686F4200858558 /* AddFriendSearchView.m */; };
 		CDC7A897DAFA34D71F2DA69A /* libPods-HengShenProduct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF8675A23360631B133D2F /* libPods-HengShenProduct.a */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +112,6 @@
 		2B528535225DEF9300E8C218 /* MACALKBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACALKBaseVC.m; sourceTree = "<group>"; };
 		2B528536225DEF9300E8C218 /* MACALKBaseTabBarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACALKBaseTabBarVC.h; sourceTree = "<group>"; };
 		2B528537225DEF9300E8C218 /* MACALKBaseNAVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACALKBaseNAVC.m; sourceTree = "<group>"; };
-		2B528543225DF1CF00E8C218 /* AddressVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressVC.h; sourceTree = "<group>"; };
-		2B528544225DF1CF00E8C218 /* AddressVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressVC.m; sourceTree = "<group>"; };
 		2B528546225DF1DE00E8C218 /* PanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PanVC.h; sourceTree = "<group>"; };
 		2B528547225DF1DE00E8C218 /* PanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PanVC.m; sourceTree = "<group>"; };
 		2B528549225DF1EB00E8C218 /* FoundVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundVC.h; sourceTree = "<group>"; };
@@ -107,11 +119,9 @@
 		2B52854C225DF1F600E8C218 /* MineVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineVC.h; sourceTree = "<group>"; };
 		2B52854D225DF1F600E8C218 /* MineVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineVC.m; sourceTree = "<group>"; };
 		2B528557225ECD7C00E8C218 /* TalkVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkVC.m; sourceTree = "<group>"; };
-		2B528558225ECD7C00E8C218 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		2B528559225ECD7C00E8C218 /* TalkListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkListVC.m; sourceTree = "<group>"; };
 		2B52855A225ECD7C00E8C218 /* TalkVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkVC.h; sourceTree = "<group>"; };
 		2B52855B225ECD7C00E8C218 /* TalkListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkListVC.h; sourceTree = "<group>"; };
-		2B52855C225ECD7C00E8C218 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		2B528561225ECE0700E8C218 /* TalkListRightItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalkListRightItemView.h; sourceTree = "<group>"; };
 		2B528562225ECE0700E8C218 /* TalkListRightItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalkListRightItemView.m; sourceTree = "<group>"; };
 		2B528564225EFFC700E8C218 /* AddFriendVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFriendVC.h; sourceTree = "<group>"; };
@@ -124,10 +134,42 @@
 		2B528587226067EC00E8C218 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		2B5285892260952B00E8C218 /* UserInfoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
 		2B52858A2260952B00E8C218 /* UserInfoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
-		2BD2B8FA2261728E00858558 /* UpLoadUserHeadImgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpLoadUserHeadImgVC.h; sourceTree = "<group>"; };
-		2BD2B8FB2261728E00858558 /* UpLoadUserHeadImgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpLoadUserHeadImgVC.m; sourceTree = "<group>"; };
 		2BD2B8FD22617E0B00858558 /* UIImage+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Add.h"; sourceTree = "<group>"; };
 		2BD2B8FE22617E0B00858558 /* UIImage+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Add.m"; sourceTree = "<group>"; };
+		2BD2B900226563B800858558 /* LZTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LZTabBar.h; sourceTree = "<group>"; };
+		2BD2B901226563B800858558 /* LZTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LZTabBar.m; sourceTree = "<group>"; };
+		2BD2B9572265AEDE00858558 /* CommonLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonLabel.h; sourceTree = "<group>"; };
+		2BD2B9582265AEDE00858558 /* CommonLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonLabel.m; sourceTree = "<group>"; };
+		2BD2B97F2265CC6600858558 /* YYImageClipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageClipViewController.h; sourceTree = "<group>"; };
+		2BD2B9802265CC6600858558 /* YYImageClipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageClipViewController.m; sourceTree = "<group>"; };
+		2BD2B9822265D00A00858558 /* UpLoadHeadImgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UpLoadHeadImgVC.h; sourceTree = "<group>"; };
+		2BD2B9832265D00A00858558 /* UpLoadHeadImgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UpLoadHeadImgVC.m; sourceTree = "<group>"; };
+		2BD2B9852266B58400858558 /* AddGroupChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddGroupChatVC.h; sourceTree = "<group>"; };
+		2BD2B9862266B58400858558 /* AddGroupChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddGroupChatVC.m; sourceTree = "<group>"; };
+		2BD2B9882266B5BE00858558 /* ScanVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanVC.h; sourceTree = "<group>"; };
+		2BD2B9892266B5BE00858558 /* ScanVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanVC.m; sourceTree = "<group>"; };
+		2BD2B98B2266B5D100858558 /* HelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
+		2BD2B98C2266B5D100858558 /* HelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
+		2BD2B98E2266D29E00858558 /* GroupSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupSearchView.h; sourceTree = "<group>"; };
+		2BD2B98F2266D29E00858558 /* GroupSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupSearchView.m; sourceTree = "<group>"; };
+		2BD2B9B7226716C200858558 /* DSectionIndexItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSectionIndexItemView.h; sourceTree = "<group>"; };
+		2BD2B9B8226716C200858558 /* DSectionIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSectionIndexView.h; sourceTree = "<group>"; };
+		2BD2B9B9226716C200858558 /* DSectionIndexItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSectionIndexItemView.m; sourceTree = "<group>"; };
+		2BD2B9BA226716C200858558 /* DSectionIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSectionIndexView.m; sourceTree = "<group>"; };
+		2BD2B9BF22671DB200858558 /* AddressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressVC.m; sourceTree = "<group>"; };
+		2BD2B9C022671DB200858558 /* AddressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressVC.h; sourceTree = "<group>"; };
+		2BD2B9C222671DD000858558 /* AddressHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressHeadView.h; sourceTree = "<group>"; };
+		2BD2B9C322671DD000858558 /* AddressHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressHeadView.m; sourceTree = "<group>"; };
+		2BD2B9C522671E9000858558 /* SearchResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchResultVC.h; sourceTree = "<group>"; };
+		2BD2B9C622671E9000858558 /* SearchResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchResultVC.m; sourceTree = "<group>"; };
+		2BD2B9C8226732F900858558 /* RCDUserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDUserInfoManager.h; sourceTree = "<group>"; };
+		2BD2B9C9226732F900858558 /* RCDUserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDUserInfoManager.m; sourceTree = "<group>"; };
+		2BD2B9CB2267346100858558 /* RCDGroupInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDGroupInfo.m; sourceTree = "<group>"; };
+		2BD2B9CC2267346100858558 /* RCDGroupInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDGroupInfo.h; sourceTree = "<group>"; };
+		2BD2B9CD2267346100858558 /* RCDUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDUserInfo.m; sourceTree = "<group>"; };
+		2BD2B9CE2267346100858558 /* RCDUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDUserInfo.h; sourceTree = "<group>"; };
+		2BD2B9FC22686F4200858558 /* AddFriendSearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddFriendSearchView.h; sourceTree = "<group>"; };
+		2BD2B9FD22686F4200858558 /* AddFriendSearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddFriendSearchView.m; sourceTree = "<group>"; };
 		8ECF8675A23360631B133D2F /* libPods-HengShenProduct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HengShenProduct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DEE47A7DBE478EEEE76E96F /* Pods-HengShenProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HengShenProduct.release.xcconfig"; path = "Target Support Files/Pods-HengShenProduct/Pods-HengShenProduct.release.xcconfig"; sourceTree = "<group>"; };
 		F93C5FDEC858164C974316F1 /* Pods-HengShenProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HengShenProduct.debug.xcconfig"; path = "Target Support Files/Pods-HengShenProduct/Pods-HengShenProduct.debug.xcconfig"; sourceTree = "<group>"; };
@@ -231,6 +273,7 @@
 				2B52851E225DEF8000E8C218 /* Category */,
 				2B528525225DEF8000E8C218 /* ShareInstance */,
 				2B528528225DEF8000E8C218 /* Tool */,
+				2BD2B9562265AEA100858558 /* View */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -308,8 +351,8 @@
 		2B52853B225DF15100E8C218 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
-				2B528543225DF1CF00E8C218 /* AddressVC.h */,
-				2B528544225DF1CF00E8C218 /* AddressVC.m */,
+				2BD2B9BE22671DB200858558 /* Controller */,
+				2BD2B9BD22671DB200858558 /* View */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -331,8 +374,8 @@
 				2B52854D225DF1F600E8C218 /* MineVC.m */,
 				2B5285892260952B00E8C218 /* UserInfoVC.h */,
 				2B52858A2260952B00E8C218 /* UserInfoVC.m */,
-				2BD2B8FA2261728E00858558 /* UpLoadUserHeadImgVC.h */,
-				2BD2B8FB2261728E00858558 /* UpLoadUserHeadImgVC.m */,
+				2BD2B9822265D00A00858558 /* UpLoadHeadImgVC.h */,
+				2BD2B9832265D00A00858558 /* UpLoadHeadImgVC.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -358,6 +401,8 @@
 		2B528555225ECD5500E8C218 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2B900226563B800858558 /* LZTabBar.h */,
+				2BD2B901226563B800858558 /* LZTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -366,14 +411,18 @@
 			isa = PBXGroup;
 			children = (
 				2B528567225F1A2A00E8C218 /* RongYunClass */,
-				2B52855C225ECD7C00E8C218 /* HomeVC.h */,
-				2B528558225ECD7C00E8C218 /* HomeVC.m */,
 				2B52855B225ECD7C00E8C218 /* TalkListVC.h */,
 				2B528559225ECD7C00E8C218 /* TalkListVC.m */,
 				2B52855A225ECD7C00E8C218 /* TalkVC.h */,
 				2B528557225ECD7C00E8C218 /* TalkVC.m */,
+				2BD2B9852266B58400858558 /* AddGroupChatVC.h */,
+				2BD2B9862266B58400858558 /* AddGroupChatVC.m */,
 				2B528564225EFFC700E8C218 /* AddFriendVC.h */,
 				2B528565225EFFC700E8C218 /* AddFriendVC.m */,
+				2BD2B9882266B5BE00858558 /* ScanVC.h */,
+				2BD2B9892266B5BE00858558 /* ScanVC.m */,
+				2BD2B98B2266B5D100858558 /* HelpVC.h */,
+				2BD2B98C2266B5D100858558 /* HelpVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -383,6 +432,10 @@
 			children = (
 				2B528561225ECE0700E8C218 /* TalkListRightItemView.h */,
 				2B528562225ECE0700E8C218 /* TalkListRightItemView.m */,
+				2BD2B98E2266D29E00858558 /* GroupSearchView.h */,
+				2BD2B98F2266D29E00858558 /* GroupSearchView.m */,
+				2BD2B9FC22686F4200858558 /* AddFriendSearchView.h */,
+				2BD2B9FD22686F4200858558 /* AddFriendSearchView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +445,8 @@
 			children = (
 				2B52857C225F2B0F00E8C218 /* RCDRCIMDataSource.h */,
 				2B52857D225F2B0F00E8C218 /* RCDRCIMDataSource.m */,
+				2BD2B9C8226732F900858558 /* RCDUserInfoManager.h */,
+				2BD2B9C9226732F900858558 /* RCDUserInfoManager.m */,
 			);
 			path = RongYunClass;
 			sourceTree = "<group>";
@@ -407,6 +462,10 @@
 		2B52856C225F1E5B00E8C218 /* RongModel */ = {
 			isa = PBXGroup;
 			children = (
+				2BD2B9CC2267346100858558 /* RCDGroupInfo.h */,
+				2BD2B9CB2267346100858558 /* RCDGroupInfo.m */,
+				2BD2B9CE2267346100858558 /* RCDUserInfo.h */,
+				2BD2B9CD2267346100858558 /* RCDUserInfo.m */,
 			);
 			path = RongModel;
 			sourceTree = "<group>";
@@ -442,6 +501,41 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2BD2B9562265AEA100858558 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BD2B9B7226716C200858558 /* DSectionIndexItemView.h */,
+				2BD2B9B9226716C200858558 /* DSectionIndexItemView.m */,
+				2BD2B9B8226716C200858558 /* DSectionIndexView.h */,
+				2BD2B9BA226716C200858558 /* DSectionIndexView.m */,
+				2BD2B97F2265CC6600858558 /* YYImageClipViewController.h */,
+				2BD2B9802265CC6600858558 /* YYImageClipViewController.m */,
+				2BD2B9572265AEDE00858558 /* CommonLabel.h */,
+				2BD2B9582265AEDE00858558 /* CommonLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BD2B9BD22671DB200858558 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2BD2B9C222671DD000858558 /* AddressHeadView.h */,
+				2BD2B9C322671DD000858558 /* AddressHeadView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2BD2B9BE22671DB200858558 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BD2B9C022671DB200858558 /* AddressVC.h */,
+				2BD2B9BF22671DB200858558 /* AddressVC.m */,
+				2BD2B9C522671E9000858558 /* SearchResultVC.h */,
+				2BD2B9C622671E9000858558 /* SearchResultVC.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5094CA6F1F7A5D5FC46F6EB3 /* Frameworks */ = {
@@ -654,32 +748,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BD2B9C422671DD000858558 /* AddressHeadView.m in Sources */,
+				2BD2B9CF2267346100858558 /* RCDGroupInfo.m in Sources */,
+				2BD2B9D02267346100858558 /* RCDUserInfo.m in Sources */,
 				2B52852D225DEF8000E8C218 /* UITextField+TextAdd.m in Sources */,
 				2B52855E225ECD7C00E8C218 /* TalkVC.m in Sources */,
-				2BD2B8FC2261728E00858558 /* UpLoadUserHeadImgVC.m in Sources */,
+				2BD2B9842265D00A00858558 /* UpLoadHeadImgVC.m in Sources */,
+				2BD2B9BB226716C200858558 /* DSectionIndexItemView.m in Sources */,
+				2BD2B98A2266B5BE00858558 /* ScanVC.m in Sources */,
+				2BD2B9812265CC6600858558 /* YYImageClipViewController.m in Sources */,
 				2B52853A225DEF9300E8C218 /* MACALKBaseNAVC.m in Sources */,
+				2BD2B9FE22686F4200858558 /* AddFriendSearchView.m in Sources */,
 				2B5284E8225DEEF000E8C218 /* ViewController.m in Sources */,
 				2B528539225DEF9300E8C218 /* MACALKBaseVC.m in Sources */,
 				2B528548225DF1DE00E8C218 /* PanVC.m in Sources */,
+				2BD2B9C122671DB200858558 /* AddressVC.m in Sources */,
 				2B52854E225DF1F600E8C218 /* MineVC.m in Sources */,
+				2BD2B9902266D29E00858558 /* GroupSearchView.m in Sources */,
 				2B52852B225DEF8000E8C218 /* UIColor+StrColor.m in Sources */,
 				2B52852C225DEF8000E8C218 /* UIView+HudStr.m in Sources */,
 				2B52854B225DF1EB00E8C218 /* FoundVC.m in Sources */,
+				2BD2B9C722671E9000858558 /* SearchResultVC.m in Sources */,
 				2B528563225ECE0700E8C218 /* TalkListRightItemView.m in Sources */,
 				2B52858B2260952B00E8C218 /* UserInfoVC.m in Sources */,
 				2B52857E225F2B0F00E8C218 /* RCDRCIMDataSource.m in Sources */,
-				2B528545225DF1CF00E8C218 /* AddressVC.m in Sources */,
 				2B528538225DEF9300E8C218 /* MACALKBaseTabBarVC.m in Sources */,
-				2B52855F225ECD7C00E8C218 /* HomeVC.m in Sources */,
+				2BD2B9592265AEDE00858558 /* CommonLabel.m in Sources */,
+				2BD2B9CA226732F900858558 /* RCDUserInfoManager.m in Sources */,
+				2BD2B98D2266B5D100858558 /* HelpVC.m in Sources */,
 				2B528566225EFFC700E8C218 /* AddFriendVC.m in Sources */,
 				2B5284F3225DEEF000E8C218 /* main.m in Sources */,
 				2B528560225ECD7C00E8C218 /* TalkListVC.m in Sources */,
 				2B5284E5225DEEF000E8C218 /* AppDelegate.m in Sources */,
+				2BD2B9BC226716C200858558 /* DSectionIndexView.m in Sources */,
 				2B52852F225DEF8000E8C218 /* MACALKTool.m in Sources */,
+				2BD2B902226563B800858558 /* LZTabBar.m in Sources */,
 				2B528581225F3F5400E8C218 /* AFHttpTool.m in Sources */,
 				2B528588226067EC00E8C218 /* LoginVC.m in Sources */,
 				2B52852E225DEF8000E8C218 /* MACALKHandle.m in Sources */,
 				2BD2B8FF22617E0B00858558 /* UIImage+Add.m in Sources */,
+				2BD2B9872266B58400858558 /* AddGroupChatVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

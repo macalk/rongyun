@@ -7,7 +7,7 @@
 //
 
 #import "UserInfoVC.h"
-#import "UpLoadUserHeadImgVC.h"
+#import "UpLoadHeadImgVC.h"
 
 @interface UserInfoVC ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -21,9 +21,12 @@ Strong NSMutableArray *dataArr;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = @"个人信息";
+    [self configDefaultLeftBarButtonWithTitle:@"个人信息"];
     self.dataArr = [NSMutableArray arrayWithObjects:@"头像",@"名字", nil];
     [self configView];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)configView {
@@ -75,7 +78,7 @@ Strong NSMutableArray *dataArr;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
-        UpLoadUserHeadImgVC *vc = [[UpLoadUserHeadImgVC alloc]init];
+        UpLoadHeadImgVC *vc = [[UpLoadHeadImgVC alloc]init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

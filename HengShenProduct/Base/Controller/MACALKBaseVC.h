@@ -18,6 +18,7 @@
 - (void)configNavigationBarShadow:(UIImage *)image;
 - (void)configNavigationBarTitleWithColor:(UIColor *)color;
 - (void)configDefaultLeftBarButton;
+- (void)configDefaultLeftBarButtonWithTitle:(NSString *)title;
 - (void)configLeftBarButtonWithImage:(NSString *)image Title:(NSString *)title;
 - (void)configRightBarButtonWithImage:(NSString *)image Title:(NSString *)title;
 

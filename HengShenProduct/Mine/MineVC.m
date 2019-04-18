@@ -11,8 +11,10 @@
 
 @interface MineVC ()<UITableViewDelegate,UITableViewDataSource>
 
-Strong NSMutableArray *dataArr;
+Strong NSArray *dataArr;
+Strong NSArray *imgArr;
 Strong NSString *userPortraitUri;
+Strong NSString *userName;
 
 @end
 
@@ -22,20 +24,31 @@ Strong NSString *userPortraitUri;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.title = @"我的";
     [self configData];
     [self configTableView];
 }
 
-- (void)configData {
-    NSString *userName = [DEFAULTS objectForKey:@"userName"];
-    NSString *userPortraitUri = [DEFAULTS objectForKey:@"userPortraitUri"];
-    self.userPortraitUri = userPortraitUri;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self configNavigationBarShadow:[UIImage new]];
+    [self configNavigationBarHidden];
     
-    if (!userName) {
-        userName = @"未登录";
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self configNavigationBarShow];
+}
+
+- (void)configData {
+    self.userName = [DEFAULTS objectForKey:@"userName"];
+    self.userPortraitUri = [DEFAULTS objectForKey:@"userPortraitUri"];
+    
+    if (!self.userName) {
+        self.userName = @"未登录";
     }
-    self.dataArr = [[NSMutableArray alloc]initWithObjects:userName,@"支付",@"收藏",@"设置", nil];
+    self.dataArr = @[@"我的钱包",@"收藏",@"相册",@"分布社交",@"设置"];
+    self.imgArr = @[@"mine_icon_qb",@"mine_icon_collect",@"mine_icon_photo",@"mine_icon_fbsj",@"mine_icon_set"];
     
 }
 
@@ -45,20 +58,99 @@ Strong NSString *userPortraitUri;
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.tableFooterView = [UIView new];
+    tableView.tableHeaderView = [self tableHeadView];
+    tableView.backgroundColor = MACALKHexColor(@"#ECEDEE");
+    tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight |
+    UIViewAutoresizingFlexibleWidth;
+    if (@available(iOS 11.0, *)) {
+        tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     [self.view addSubview:tableView];
     
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        return 80;
-    }
+- (UIView *)tableHeadView {
     
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 130)];
+    headView.backgroundColor = [UIColor whiteColor];
+    
+    UIImageView *headImg = [[UIImageView alloc]init];
+    headImg.backgroundColor = [UIColor redColor];
+    headImg.layer.cornerRadius = 8;
+    headImg.clipsToBounds = YES;
+    [headImg sd_setImageWithURL:MACALKUrl(self.userPortraitUri)];
+    [headView addSubview:headImg];
+    [headImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(headView).with.offset(40);
+        make.left.equalTo(headView).with.offset(25);
+        make.size.mas_offset(CGSizeMake(65, 65));
+    }];
+    
+    CommonLabel *username = [[CommonLabel alloc]initWithText:self.userName font:17 textColor:nil];
+    [headView addSubview:username];
+    [username mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(headImg).with.offset(5);
+        make.left.equalTo(headImg.mas_right).with.offset(20);
+    }];
+    
+    CommonLabel *account = [[CommonLabel alloc]initWithText:[NSString stringWithFormat:@"撩信账号：****"] font:17 textColor:@"#6D6E6F"];
+    [headView addSubview:account];
+    [account mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(headImg).with.offset(-5);
+        make.left.equalTo(headImg.mas_right).with.offset(20);
+    }];
+    
+    UIImageView *nextImg = [[UIImageView alloc]initWithImage:MACALKImage(@"icon_next")];
+    [headView addSubview:nextImg];
+    [nextImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(account);
+        make.right.equalTo(headView).with.offset(-15);
+    }];
+    
+    UIImageView *codeImg = [[UIImageView alloc]initWithImage:MACALKImage(@"mine_icon_erweima")];
+    [headView addSubview:codeImg];
+    [codeImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(account);
+        make.right.equalTo(nextImg.mas_left).with.offset(-20);
+    }];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(userInfoTap)];
+    [headView addGestureRecognizer:tap];
+    
+    return headView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 60;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 4;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    view.backgroundColor = MACALKHexColor(@"#ECEDEE");
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 10;
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }else if (section == 1) {
+        return 3;
+    }else if (section == 2) {
+        return 1;
+    }
+    return 0;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -67,39 +159,36 @@ Strong NSString *userPortraitUri;
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    if (indexPath.row == 0) {
-        
-        UIImageView *headImg = [[UIImageView alloc]init];
-        headImg.backgroundColor = [UIColor redColor];
-        [headImg sd_setImageWithURL:MACALKUrl(self.userPortraitUri)];
-        [cell.contentView addSubview:headImg];
-        [headImg mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(cell.contentView);
-            make.left.equalTo(cell.contentView).with.offset(15);
-            make.size.mas_offset(CGSizeMake(50, 50));
-        }];
-        
-        UILabel *username = [[UILabel alloc]init];
-        username.text = [NSString stringWithFormat:@"%@",self.dataArr[indexPath.row]];
-        [cell.contentView addSubview:username];
-        [username mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerY.equalTo(headImg);
-            make.left.equalTo(headImg.mas_right).with.offset(20);
-        }];
-       
-    }else {
+    if (indexPath.section == 0) {
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.imgArr[indexPath.row]]];
         cell.textLabel.text = [NSString stringWithFormat:@"%@",self.dataArr[indexPath.row]];
+    }else if(indexPath.section == 1){
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.imgArr[indexPath.row+1]]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",self.dataArr[indexPath.row+1]];
+    }else {
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",self.imgArr[indexPath.row+4]]];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@",self.dataArr[indexPath.row+4]];
     }
+    
+    UIImageView *nextImg = [[UIImageView alloc]initWithImage:MACALKImage(@"icon_next")];
+    [cell.contentView addSubview:nextImg];
+    [nextImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(cell.contentView);
+        make.right.equalTo(cell.contentView).with.offset(-15);
+    }];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 0) {
-        UserInfoVC *infoVC = [[UserInfoVC alloc]init];
-        infoVC.view.backgroundColor = [UIColor whiteColor];
-        [self.navigationController pushViewController:infoVC animated:YES];
-    }
+    
+}
+
+- (void)userInfoTap {
+    UserInfoVC *infoVC = [[UserInfoVC alloc]init];
+    infoVC.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController pushViewController:infoVC animated:YES];
 }
 
 

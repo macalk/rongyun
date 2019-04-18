@@ -23,6 +23,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self configNavigationBarShadow:[UIImage new]];
+    [self configNavigationBarImage:[UIImage imageWithColor:MACALKHexColor(@"#ECEDEE")]];
 }
 
 - (void)configStatusBarDefault {
@@ -57,34 +60,49 @@
 
 - (void)configDefaultLeftBarButton {
     if (self.navigationController.viewControllers && [self.navigationController.viewControllers firstObject] != self) {
-        [self configLeftBarButtonWithImage:@"login_icon_retunt" Title:nil];
+        [self configLeftBarButtonWithImage:@"icon_return_black" Title:nil];
     }
+}
+
+- (void)configDefaultLeftBarButtonWithTitle:(NSString *)title {
+    [self configLeftBarButtonWithImage:@"icon_return_black" Title:title];
 }
 
 - (void)configLeftBarButtonWithImage:(NSString *)image Title:(NSString *)title {
     NSMutableArray *buttonItems = [NSMutableArray array];
-    if (!NULLString(image)) {
+    if (!NULLString(image) && NULLString(title)) {
         UIImage *btnImage = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:btnImage style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAciton)];
         [buttonItems addObject:item];
-    }
-    else if (!NULLString(title)) {
+    }else if (!NULLString(title) && NULLString(image)) {
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAciton)];
         [buttonItems addObject:item];
+    }else if (!NULLString(title) && !NULLString(image)) {
+        UIImage *btnImage = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:btnImage style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAciton)];
+        [buttonItems addObject:item];
+        UIBarButtonItem *itemT = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonAciton)];
+        [itemT setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:17.0f]} forState:UIControlStateNormal];
+        [buttonItems addObject:itemT];
     }
     self.navigationItem.leftBarButtonItems = buttonItems;
 }
 
 - (void)configRightBarButtonWithImage:(NSString *)image Title:(NSString *)title {
     NSMutableArray *buttonItems = [NSMutableArray array];
-    if (!NULLString(image)) {
+    if (!NULLString(image) && NULLString(title)) {
         UIImage *btnImage = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:btnImage style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAciton)];
         [buttonItems addObject:item];
-    }
-    else if (!NULLString(title)) {
+    }else if (!NULLString(title) && NULLString(image)) {
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAciton)];
         [buttonItems addObject:item];
+    }else if (!NULLString(title) && !NULLString(image)) {
+        UIImage *btnImage = [[UIImage imageNamed:image] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:btnImage style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAciton)];
+        [buttonItems addObject:item];
+        UIBarButtonItem *itemT = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonAciton)];
+        [buttonItems addObject:itemT];
     }
     self.navigationItem.rightBarButtonItems = buttonItems;
 }

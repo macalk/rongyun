@@ -10,6 +10,6 @@
 #define ColorDefine_h
 
 #define Tab_Color_Normal                      MACALKHexColor(@"#909298")
-#define Tab_Color_Selected                    MACALKHexColor(@"#F8BE46")
+#define Tab_Color_Selected                    MACALKHexColor(@"#56AF62")
 
 #endif /* ColorDefine_h */

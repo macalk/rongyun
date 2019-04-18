@@ -99,6 +99,7 @@
 //    }
     return;
 }
+
 #pragma mark - RCIMGroupUserInfoDataSource  获取用户在群组中的群名片信息
 
 - (void)getUserInfoWithUserId:(NSString *)userId
